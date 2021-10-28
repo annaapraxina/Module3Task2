@@ -8,7 +8,7 @@ import web.model.Car;
 import java.util.List;
 
 @Service
-public class CarServiceImpl implements CarService{
+public class CarServiceImpl implements CarService {
 
     private CarDao carDao;
 
@@ -20,7 +20,7 @@ public class CarServiceImpl implements CarService{
     @Override
     public List<Car> getCarsByCount(Integer count) {
         List<Car> allCars = carDao.getAllCars();
-        if (count == null || count > allCars.size()){
+        if (count == null || count > allCars.size()) {
             return allCars;
         } else {
             return allCars.subList(0, count);
